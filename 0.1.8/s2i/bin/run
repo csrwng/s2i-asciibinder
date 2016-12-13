@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ./docs/_preview
+asdf --port 8080

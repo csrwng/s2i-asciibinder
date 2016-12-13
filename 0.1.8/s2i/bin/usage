@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cat <<EOF
+This is an AsciiBinder documentation builder image.
+
+For more information on AsciiBinder, see the documentation: 
+http://www.asciibinder.org/latest/welcome/
+
+To use it, install S2I: https://github.com/openshift/source-to-image
+
+Sample invocation:
+
+s2i build https://github.com/openshift/openshift-docs.git openshift-s2i/asciibinder-018-centos7 openshift-docs
+
+You can then run the resulting image via:
+docker run -p 8080:8080 openshift-docs
+EOF

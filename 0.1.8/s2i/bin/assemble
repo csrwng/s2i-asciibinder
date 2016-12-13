@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+echo "---> Installing docs source"
+mkdir ./docs
+mv /tmp/src/* ./docs
+cd docs
+git init . && git add . && git commit -m "build"
+
+echo "---> Building preview"
+JAVA_HOME=/usr/lib/jvm/jre asciibinder build
+chgrp -R root . && chmod -R g+wx .
